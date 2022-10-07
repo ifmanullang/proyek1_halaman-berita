@@ -1,0 +1,41 @@
+<%- include('templates/header')-%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <div class="p-3 mb-2 bg-warning text-dark">
+    <div class="container">
+      <h1>Buat Berita Baru</h1>
+      <br />
+
+      <div class="p-5 mb-4 bg-light rounded-3">
+        <form method="POST" action="/tambahberita" class="mt-4" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="judul" class="form-label">Judul Berita</label>
+            <input type="text" name="judul" class="form-control" id="judul" placeholder="Judul Berita" required />
+          </div>
+          <div class="mb-3">
+            <label for="deskripsi" class="form-label">Deskripsi Singkat</label>
+            <textarea name="deskripsi" class="form-control" id="deskripsi" placeholder="Deskripsi" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="isi" class="form-label">Isi Berita</label>
+            <textarea name="isi" class="form-control" id="isi" placeholder="Isi Berita" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="gambar" class="form-label">Gambar</label>
+            <input type="file" accept="image/png, image/jpeg, image/jpg" class="form-control" id="gambar" name="gambar" required />
+          </div>
+          <button type="submit" class="btn bg-success">Kirim</button>
+          <a href="/berita" class="btn bg-secondary">Kembali</a>
+        </form>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
+<%- include('templates/footer')-%>

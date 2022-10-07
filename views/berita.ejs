@@ -1,0 +1,29 @@
+<%- include('templates/header')-%> <br />
+<div class="p-3 mb-2 bg-secondary text-white">(IFM)
+
+<div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
+  <a href="/tambahberita" class="btn btn-outline-info"> Tambah Berita </a>
+</div>
+  </div>
+</div>
+&nbsp; <%berita.forEach(function(item) {%>
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid py-5">
+    <p><img src="../images/<%=item.gambar%>" style="width: 630px; height: 360px" class="rounded mx-auto d-block" alt="<%=item.judul%>" /></p>
+    <h1><b><%=item.judul%></b></h1>
+    <p><%=item.deskripsi%></p>
+
+    <a href="/baca/<%=item.id%>" class="btn bg-info"> Baca Detail </a>
+      <a href="/editberita/<%=item.id %>" class="btn bg-warning"> Edit </a> &emsp; &emsp; &emsp; 
+      &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      &emsp;&emsp;&emsp;&emsp;
+      <a href="/deleteberita/<%=item.id %>" class="btn bg-danger"> Hapus </a> &emsp;
+      <a href="/login" class="btn bg-secondary">Kembali</a>
+
+    </p>
+  </div>
+</div>
+</div>
+</div>
+<%});%> <%- include('templates/footer')-%>

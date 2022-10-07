@@ -1,0 +1,21 @@
+<div class="bg-success p-2 text-dark bg-opacity-25">Setelah Login Kamu Akan Membaca Berita   
+<%- include('templates/headerLogin')-%>
+
+<div class="container">
+  <h1>Login</h1>
+  <br />
+  <form method="POST" action="/login">
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" class="form-control" name="username" id="username" placeholder="username" />
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" name="password" id="password" placeholder="password" />
+    </div>
+    <button type="submit" class="btn btn-light">Login</button> &nbsp; <a href="/register" class="btn btn-info">Register</a>
+  </form>
+</div>
+</div>
+<%- include('templates/footer')-%>
+
